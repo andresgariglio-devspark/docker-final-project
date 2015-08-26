@@ -1,6 +1,7 @@
 docker run 
 --name web 
 --link mysql:mysql
+-v /home/ubuntu/workspace/docker-final-project/worldapi:/opt/www/worldapi/
 -d 
 -p 8081:80 
 php-link:1.0

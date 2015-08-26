@@ -1,5 +1,7 @@
 web:
  build: .
+ volumes:
+  - ./worldapi:/opt/www/worldapi/
  ports:
   - "8081:80"
  links:

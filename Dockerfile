@@ -16,8 +16,6 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 ENV WORLD_API_DOCUMENT_ROOT /opt/www/worldapi/public/
 ENV WORLD_API_SERVER_NAME api.world.com.ar
 
-ENV DB_HOST localhost
-
 EXPOSE 80
 
 COPY apache2.conf /etc/apache2/apache2.conf
@@ -25,7 +23,6 @@ COPY worldapi.conf /etc/apache2/sites-available/worldapi.conf
 RUN a2ensite worldapi.conf
 
 
-COPY worldapi /opt/www/worldapi/
 
 
 COPY entrypoint.sh /entrypoint.sh
